@@ -6,8 +6,9 @@ class ahadethTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-    itemCount: ,
+    return
+      ListView.builder(
+    itemCount:2, itemBuilder: (BuildContext context, int index) {  } ,
     );
   }
   void loadHadith()async

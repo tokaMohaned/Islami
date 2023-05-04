@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData{
   //بلته الالوان بتاعت المشروع
@@ -19,7 +20,9 @@ class MyThemeData{
     ),
 
       textTheme: const TextTheme(
-        bodySmall: TextStyle(
+        bodySmall:
+        //GoogleFonts.elMessiri(),
+        TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
           color: lightColor,

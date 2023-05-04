@@ -43,12 +43,15 @@ List<Widget> tabs=
               });
             },
             items: [//minimum is 2 and max5 items
+
               BottomNavigationBarItem(
-                  icon:
-                  ImageIcon(AssetImage("assets/images/radio.png")),
-              label: "radio",
+                icon:
+                ImageIcon(AssetImage("assets/images/quran.png")),
+                label: "qran",
                 backgroundColor: Theme.of(context).primaryColor,
+
               ),
+
 
               BottomNavigationBarItem(
                   icon:
@@ -59,11 +62,10 @@ List<Widget> tabs=
     ),
 
               BottomNavigationBarItem(
-                  icon:
-                  ImageIcon(AssetImage("assets/images/quran.png")),
-                  label: "qran",
+                icon:
+                ImageIcon(AssetImage("assets/images/radio.png")),
+                label: "radio",
                 backgroundColor: Theme.of(context).primaryColor,
-
               ),
 
               BottomNavigationBarItem(
