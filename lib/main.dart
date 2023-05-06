@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/home%20screen.dart';
 import 'package:untitled/sura_details.dart';
+import 'package:untitled/tabs/hadeth_details.dart';
 import 'package:untitled/tabs/qran.dart';
 
 import 'MyThemeData.dart';
@@ -27,6 +28,9 @@ void main()
          HomeScreen.routName:(context)=>HomeScreen(),
          Qran_tab.routName:(c)=>Qran_tab(),
          SuraDetails.routName:(c)=>SuraDetails(),
+         HadethDetails.routName:(c)=>HadethDetails(),
+
+
 
 
        },
