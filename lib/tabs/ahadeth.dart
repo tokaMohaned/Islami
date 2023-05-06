@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:untitled/hadithModel.dart';
+
+import 'hadeth_details.dart';
 
 class ahadethTab extends StatefulWidget {
   ahadethTab({Key? key}) : super(key: key);
@@ -14,8 +15,13 @@ class ahadethTab extends StatefulWidget {
 class _ahadethTabState extends State<ahadethTab> {
   List<HadethModel> allAhadeth = [];
 
+
   @override
   Widget build(BuildContext context) {
+    if(allAhadeth.isEmpty)
+    {
+      loadHadithFile();
+    }
     return Center(
       child: Column(
         children: [
@@ -24,10 +30,17 @@ class _ahadethTabState extends State<ahadethTab> {
             child: ListView.separated(
               itemCount: allAhadeth.length,
               itemBuilder: (BuildContext context, int index) {
-                return Text(
-                  allAhadeth[index].title,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium,
+                return InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context,
+                        HadethDetails.routName,arguments: allAhadeth[index]);
+                    //argument is the context
+                  },
+                  child: Text(
+                    allAhadeth[index].title,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 );
               },
               separatorBuilder: (context, index) => Divider(
