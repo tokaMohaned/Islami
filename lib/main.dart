@@ -22,6 +22,7 @@ void main()
        debugShowCheckedModeBanner:false,
        theme: MyThemeData.lightTheme,
        darkTheme: MyThemeData.darkTheme,
+       //themeMode: ThemeMode.light, لو انا عيزه اثبت المود
 
        initialRoute:HomeScreen.routName ,
        routes: {

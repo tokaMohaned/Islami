@@ -39,7 +39,9 @@ class _ahadethTabState extends State<ahadethTab> {
                   child: Text(
                     allAhadeth[index].title,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      fontSize: 18
+                    ),
                   ),
                 );
               },
