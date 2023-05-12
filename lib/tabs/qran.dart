@@ -1,10 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:untitled/provider/my_provider.dart';
 import 'package:untitled/suraDetailsArgs.dart';
 import 'package:untitled/sura_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Qran_tab extends StatelessWidget {
   static const String routName = "Qran";
+   
 
   Qran_tab({Key? key}) : super(key: key);
   List<String> suraNames = [
@@ -126,27 +131,31 @@ class Qran_tab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider=Provider.of<MyProvider>(context);
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset("assets/images/Screenshot (1).png"),
           Divider(
-            color: Theme.of(context).primaryColor,
+            color: provider.themeMode==ThemeMode.light?
+            Theme.of(context).primaryColor:Theme.of(context).colorScheme.secondary,
             thickness: 3,
           ),
           Text(
-            "Sura Name",
+            AppLocalizations.of(context)!.suraNames,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           Divider(
-            color: Theme.of(context).primaryColor,
+            color: provider.themeMode==ThemeMode.light?
+            Theme.of(context).primaryColor:Theme.of(context).colorScheme.secondary,
             thickness: 3,
           ),
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) => Divider(
-                color: Theme.of(context).primaryColor,
+                color: provider.themeMode==ThemeMode.light?
+                Theme.of(context).primaryColor:Theme.of(context).colorScheme.secondary,
                 thickness: 1,
                 endIndent: 35,
                 indent: 35,

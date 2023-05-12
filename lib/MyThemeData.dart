@@ -54,8 +54,6 @@ class MyThemeData{
           fontWeight: FontWeight.bold,
           color: Colors.black,
         ),
-
-
       ),
 
 

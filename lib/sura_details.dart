@@ -26,8 +26,14 @@ class _SuraDetailsState extends State<SuraDetails> {
 
 
     return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/mainpg.png"),
+      decoration:  BoxDecoration(
+        image: DecorationImage(
+
+          image:  AssetImage(
+            Theme.of(context).colorScheme.brightness == Brightness.light
+                ? "assets/images/mainpg.png"
+                : "assets/images/dark_background.png",
+          ),
         fit: BoxFit.fill,
         ),
       ),
@@ -85,7 +91,7 @@ class _SuraDetailsState extends State<SuraDetails> {
                         TextSpan(
                           text: "\u06dd${i+1}",
                           style: GoogleFonts.amiri(
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 25,
                           ),
                         ),

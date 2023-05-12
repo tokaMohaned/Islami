@@ -34,7 +34,7 @@ class _ahadethTabState extends State<ahadethTab> {
                   onTap: (){
                     Navigator.pushNamed(context,
                         HadethDetails.routName,arguments: allAhadeth[index]);
-                    //argument is the context
+                    //argument is the context, it is help me to send the content form screen to another
                   },
                   child: Text(
                     allAhadeth[index].title,
@@ -71,7 +71,7 @@ class _ahadethTabState extends State<ahadethTab> {
       for(int i=0; i<AhadethContent.length;i++)
         {
           //انا عيزه اقطع الجزء بتاع العنوان بتاع الحديث
-          int LastIndexOfFirstLine=AhadethContent[0].trim().indexOf("\n");
+          int LastIndexOfFirstLine=AhadethContent[i].trim().indexOf("\n");
           String title=AhadethContent[i].trim().//remove spaces
           substring(0,LastIndexOfFirstLine);//substring take string from
           //index 0 until new line  \n
@@ -80,7 +80,7 @@ class _ahadethTabState extends State<ahadethTab> {
           trim().substring(LastIndexOfFirstLine+1);
           HadethModel hadethModel=HadethModel(title, contet);
           allAhadeth.add(hadethModel);
-          print(contet);
+          //print(contet);
           setState(() {
 
           });

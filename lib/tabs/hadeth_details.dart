@@ -10,10 +10,19 @@ class HadethDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     var args=ModalRoute.of(context)?.settings.arguments as HadethModel;
     return  Container(
-        decoration: const BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/mainpg.png"),
-    fit: BoxFit.fill,
-    ),
+        decoration:  BoxDecoration(
+        image: DecorationImage(
+            image:  AssetImage(
+              Theme.of(context).colorScheme.brightness == Brightness.light
+                  ? "assets/images/mainpg.png"
+                  : "assets/images/dark_backgrount.png",
+              ),
+          fit: BoxFit.fill,
+
+
+
+
+        ),
     ),
     child: Scaffold(
     appBar: AppBar(
