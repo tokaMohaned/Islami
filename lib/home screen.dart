@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> tabs = [
     Qran_tab(),
     SebhaTab(),
-    RadioTab(),
+    //RadioTab(),
     ahadethTab(),
-    Setting_tab()
+    Setting_tab(),
   ];
 
   @override
@@ -67,11 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor: Theme.of(context).primaryColor,
             ),
 
-            BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/images/radio.png")),
-              label: AppLocalizations.of(context)!.radio,
-              backgroundColor: Theme.of(context).primaryColor,
-            ),
+
 
             BottomNavigationBarItem(
               icon: ImageIcon(
