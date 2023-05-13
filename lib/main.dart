@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/home%20screen.dart';
 import 'package:untitled/provider/my_provider.dart';
 import 'package:untitled/sura_details.dart';
-import 'package:untitled/tabs/hadeth_details.dart';
+import 'package:untitled/hadeth_details.dart';
 import 'package:untitled/tabs/qran.dart';
 
  import 'package:flutter_gen/gen_l10n/app_localizations.dart';

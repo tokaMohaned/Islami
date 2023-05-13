@@ -15,7 +15,7 @@ class HadethDetails extends StatelessWidget {
             image:  AssetImage(
               Theme.of(context).colorScheme.brightness == Brightness.light
                   ? "assets/images/mainpg.png"
-                  : "assets/images/dark_backgrount.png",
+                  : "assets/images/dark_background.png",
               ),
           fit: BoxFit.fill,
 
